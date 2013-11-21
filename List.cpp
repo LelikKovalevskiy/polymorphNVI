@@ -66,15 +66,16 @@ int List::countImpl()
     }
     return counter;
 }
-Node* List::findImpl(int data)
+void List:: findImpl(int value, void *&pointer)
 {
     Node*temp=Head;
     while(temp)
     {
-        if (temp->data=data)
-            return temp;
+        if (temp->data=value)
+            break;
+            temp=temp->Next;
     }
-    return 0;
+    pointer=(void*)temp;
 }
 void List:: clearImpl()
 {

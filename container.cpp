@@ -17,11 +17,11 @@ int Container::count()
 {
     return countImpl();
 }
-ContainerIterator Container::find(int &value)
+ContainerIterator Container::find(int value)
 {
     void *pointer = 0;
     findImpl(value, pointer);
-    return Iterator(this, pointer);
+    return ContainerIterator(this, pointer);
 }
 void Container::clear()
 {

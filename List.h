@@ -14,7 +14,7 @@ private:
     void delImpl(Node*);//+
     void generateImpl(int);//+
     int countImpl();//+
-    void findImpl(int &value, void *&pointer)
+    void findImpl(int value, void *&pointer);
     void clearImpl();//
     void printImpl();//+
     void *beginImpl();

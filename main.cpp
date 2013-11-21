@@ -8,10 +8,10 @@ using namespace std;
 int main()
 {
     Container* test=new List;
-    test->generate(5);
-    for(ContainerIterator it = test->begin(),end=test->end();it!=end;++it)
-        *it=0;
-    test->print();
+    test->generate(2);
+    test->add(10);
+    ContainerIterator it=test->find(10);
+    cout<<*it;
     return 0;
 
 }

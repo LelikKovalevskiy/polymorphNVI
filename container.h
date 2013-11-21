@@ -18,7 +18,7 @@ public:
     void del(Node*);
     void generate(int);
     int count();
-    ContainerIterator find(int &value);
+    ContainerIterator find(int value);
     void clear();
     void print();
     ContainerIterator begin();
@@ -37,7 +37,7 @@ private:
     virtual void delImpl(Node*)=0;
     virtual void generateImpl(int)=0;
     virtual int countImpl()=0;
-    virtual void findImpl(int &value, void *&pointer) = 0;
+    virtual void findImpl(int value, void *&pointer) = 0;
     virtual void clearImpl()=0;
     virtual void printImpl()=0;
     ///////////////////////////////////////////
